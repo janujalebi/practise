@@ -1,4 +1,5 @@
 FROM tomcat
 WORKDIR /usr/local/tomcat
-COPY /target/*.war /usr/local/tomcat/webapps/
+ADD tomcat-user.xml /usr/local/tomcat/connf
+CMD ["catalina.sh", "run"]
 
